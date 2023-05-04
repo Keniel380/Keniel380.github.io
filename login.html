@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // 
+       /* function test(){
+            let name = document.querySelector("#name");
+            let email = document.querySelector("#email");
+            localStorage.setItem("password2",name.value);
+            localStorage.setItem("email2",email.value);
+        }
+        document.addEventListener("DOMContentLoaded",()=>{
+            //console.log("nipoo")
+
+            let name = document.querySelector("#name");
+            let email = document.querySelector("#email");
+            document.querySelector("#submit").onclick = ()=>{
+                localStorage.setItem("name",name.value);
+                localStorage.setItem("email",email.value);
+            }
+        });*/
+
+        document.addEventListener("DOMContentLoaded",function(){
+
+            const Login = document.querySelector("#submit");
+            Login.onclick = (e)=> {
+                e.preventDefault();
+                
+            const name = document.querySelector("#Name").value;
+            const email = document.querySelector("#Email").value;
+             
+            // document.querySelector("#name").innerHTML = localStorage.getItem("Name");
+            //  document.querySelector("#email").innerHTML = localStorage.getItem("email");
+            const Name = localStorage.getItem("name");
+            const Email = localStorage.getItem("email");
+
+            if(name == "" && email == ""){
+                alert("Please enter");
+            }
+            else{
+                if(name == Name && email == Email){
+                alert("login successful");
+                window.location.href= "index.html";
+            }
+            else{
+                alert("login failed");
+            }
+
+            }
+
+            
+
+            }
+
+            });
+    </script>
+</head>
+<body>
+    <div class="print-area">
+        <div class="header">
+            <img src="profile.JPG" alt="My Profile pic">
+            <div class="header-text">
+                <h1>KELVIN DANIEL</h1>
+                <P>Web Developer</P>
+             </div>
+        </div>
+        
+
+    </div>
+
+    	    <center> <h1> *Sign In Here* </h1> </center>   	    
+            <form >  
+	        <div class="container">   
+	            <label>Email : </label>   
+	            <input type="email" placeholder="Enter your email" id="Email" required>  
+	            <label>Name: </label>   
+	            <input type="text" placeholder="Enter your name" id="Name" required>  
+	            <!-- <button type="submit"></button><a href="cv.html">Login</a> -->
+	            <button type="submit" id="submit">login</button>
+	            <!--<input type="checkbox" checked="checked"> Remember me
+                <br>
+                    <legend id="em"></legend>
+                    <legend id="paswd"></legend>
+                <br> 
+                 <br>
+                <br>
+                
+                <br>
+                
+
+	            <button type="submit"></button><a href="">CONTACT-US</a> -->
+
+	        </div>   
+    </form>     
+
+            
+           
+    
+</body>
+</html>
